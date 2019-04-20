@@ -121,7 +121,7 @@ export const GameBoard = () => {
 			<Button
 				onClick={() => {
 					const el = document.createElement("textarea");
-					el.value = `${location.host}?level=${JSON.stringify(initialLayout)}`;
+					el.value = `${location.origin}${location.pathname}?level=${JSON.stringify(initialLayout)}`;
 					document.body.appendChild(el);
 					el.select();
 					document.execCommand("copy");
